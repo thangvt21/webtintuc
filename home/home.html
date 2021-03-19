@@ -17,7 +17,7 @@
                     </a>
                 </div>
                 <input type="text" name="search" id="search-bar" placeholder="Nhap tu khoa de tim kiem ..">
-                <img src="../assets/img/iconfinder_search_5402443.png" alt="icon-search" onclick="slide()" id="icon-search">
+                <img src="../assets/img/iconfinder_search_5402443.png" alt="icon-search" id="icon-search">
                 <div class="head-btngroup">
                     <div>Login</div>
                     <div>Register</div>
@@ -27,10 +27,12 @@
         <div class="main">main</div>
         <div class="foot">footer</div>
         <script>
-            var x = document.getElementById("search-bar");
-            function slide() {     
+            document.getElementById("icon-search").addEventListener('click',click,true);
+            function click(event) {   
+                var x = document.getElementById("search-bar");  
                 x.style.width = "15%";
-        }
+                event.preventDefault();
+            }
         </script>
 </body>
 </html>
