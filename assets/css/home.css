@@ -1,0 +1,32 @@
+.head{
+    width: 100%;
+    margin-bottom: 8px;
+    border-bottom: solid 1px gray;
+}
+.head-container{
+    margin: 0px 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px;
+}
+#brand{
+    height: 50px;
+    width: 50px;
+    margin-right: 16px;
+}
+/* .head-search{
+    cursor: pointer;
+} */
+#search-bar {
+    width: 0%;
+    height: 35px;
+    transition: width 0.4s ease-in-out;
+    /* visibility: hidden; */
+    border: 0px;
+  }
+#icon-search{
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
