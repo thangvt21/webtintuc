@@ -1,9 +1,16 @@
 :root{
     --black-color: black;
     --white-color: white;
+    --white-color: rgba(255, 255, 255, 1);
+    --text-color: #333;
+    --btn-color: #323ebe;
+    --btn-hover-color: blue;
+    --btn-sidebar-hover-color: rgb(213, 213, 216);
+    --gray-color: #eef0f1;
 }
 body{
     margin: 0;
+    background-color: var(--gray-color);
 }
 *{
     box-sizing: border-box;
