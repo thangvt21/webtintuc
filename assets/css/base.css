@@ -6,11 +6,12 @@
     --btn-color: #323ebe;
     --btn-hover-color: blue;
     --btn-sidebar-hover-color: rgb(213, 213, 216);
-    --gray-color: #eef0f1;
+    --bg-tab-color: rgb(214, 211, 211);
+    --bg-color: #eef0f1;
 }
 body{
     margin: 0;
-    background-color: var(--gray-color);
+    background-color: var(--bg-color);
 }
 *{
     box-sizing: border-box;
@@ -19,4 +20,14 @@ body{
 }
 html{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ul{
+    list-style-type: none;
+}
+li{
+    margin: 0px 8px;
+}
+a{
+    text-decoration: none;
+    color: black;
 }

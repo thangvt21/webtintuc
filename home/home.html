@@ -7,6 +7,7 @@
     <title>Home</title>
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
         <div class="head">
@@ -22,11 +23,40 @@
                 </div>
                 <input type="text" name="search" id="search-bar" placeholder="Nhap tu khoa de tim kiem .." onblur="handleronblur()">
                 <img src="../assets/img/iconfinder_search_5402443.png" alt="icon-search" id="icon-search">
-                <div class="greeting" id="greeting">Good morning</div>
+                <div class="greeting" id="greeting"></div>
             </div>
         </div>
-        <div class="main">main</div>
-        <div class="foot">footer</div>
+        <div class="ad-banner"></div>
+        <div class="main">
+            <div class="main-container">
+                <div class="trending-bar">
+                    <ul class="trend-content">
+                        <li class="trend-label">TRENDING</li>
+                        <li>
+                            <a href="#">CES 2020</a>
+                        </li>
+                        <li><a href="#">AI</a>
+                            </li>
+                        <li><a href="#">Best CPU</a>
+                            </li>
+                        <li><a href="#">Best Phone</a>
+                            </li>
+                        <li><a href="#">Marvel Movies</a>
+                            </li>
+                        <li><a href="#">COVID-19 vaccines</a>
+                            </li>
+                        <li><a href="#">VPN</a>
+                            </li>
+                    </ul>
+                </div>
+                <aside><small> -- You can not use up creativity. The more you use, the more you have. -- Maya Angelou, 2011</small></aside>
+                <div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="foot">footer</div> -->
         <script>
             document.getElementById("icon-search").addEventListener('click',click,true);
             function click(event) {   
@@ -38,6 +68,18 @@
                 var x = document.getElementById("search-bar");  
                 x.style.width = "0%";
             }
+
+            var date = new Date();
+            var gio = date.getHours();
+            var phut = date.getMinutes();
+            if(gio >= 0 && gio < 12){
+                document.getElementById("greeting").innerHTML = "Good morning,";
+            } else if(gio >=12 && gio <=18){
+                document.getElementById("greeting").innerHTML = "Good afternoon,";
+            } else{
+                document.getElementById("greeting").innerHTML = "Good night !";
+            }
+    // ----------------------header js-------------------------------------------------------
         </script>
 </body>
 </html>
