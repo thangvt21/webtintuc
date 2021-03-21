@@ -16,7 +16,7 @@
                         <img src="../assets/img/iconfinder_m-16_4230548.png" alt="icon-brand" id="brand">
                     </a>
                 </div>
-                <input type="text" name="search" id="search-bar" placeholder="Nhap tu khoa de tim kiem ..">
+                <input type="text" name="search" id="search-bar" placeholder="Nhap tu khoa de tim kiem .." onblur="handleronblur()">
                 <img src="../assets/img/iconfinder_search_5402443.png" alt="icon-search" id="icon-search">
                 <div class="head-btngroup">
                     <div>Login</div>
@@ -31,6 +31,11 @@
             function click(event) {   
                 var x = document.getElementById("search-bar");  
                 x.style.width = "15%";
+                event.preventDefault();
+            }
+            function handleronblur(event) {   
+                var x = document.getElementById("search-bar");  
+                x.style.width = "0%";
                 event.preventDefault();
             }
         </script>
