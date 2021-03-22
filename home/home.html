@@ -14,7 +14,7 @@
             <div class="head-container">
                 <div class="head-btngroup">
                     <div class="btn btn-login">Login</div>
-                    <div class="btn btn-register">Register</div>
+                    <div class="btn btn-register" id="register">Register</div>
                 </div>
                 <div class="head-brand">
                     <a href="../home/home.html">
@@ -26,7 +26,13 @@
                 <div class="greeting" id="greeting"></div>
             </div>
         </div>
-        <div class="ad-banner"></div>
+        <div class="register-drop" id="header-drop">
+            <a href="javascript:void(0)" class="close-btn" onclick="closedrop()">&times;</a>
+            <div class="drop-content">
+                helllo
+            </div>
+        </div>
+        <!-- <div class="ad-banner"></div> -->
         <div class="main">
             <div class="main-container">
                 <div class="trending-bar">
@@ -73,13 +79,22 @@
             var gio = date.getHours();
             var phut = date.getMinutes();
             if(gio >= 0 && gio < 12){
-                document.getElementById("greeting").innerHTML = "Good morning,";
+                document.getElementById("greeting").innerHTML = "Good morning, have a great day!";
             } else if(gio >=12 && gio <=18){
                 document.getElementById("greeting").innerHTML = "Good afternoon,";
             } else{
-                document.getElementById("greeting").innerHTML = "Good night !";
+                document.getElementById("greeting").innerHTML = "Good night ~";
             }
+
     // ----------------------header js-------------------------------------------------------
+            document.getElementById("register").addEventListener('click',clickdropdown,true);
+            function clickdropdown(event){
+                document.getElementById("header-drop").style.height = "250px";
+                event.preventDefault();
+            }
+            function closedrop(){
+                document.getElementById("header-drop").style.height = "0px";
+            }
         </script>
 </body>
 </html>
